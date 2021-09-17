@@ -1,0 +1,59 @@
+{
+    "galaxy1": [{
+            "name": "Cheese",
+            "id": "0001",
+            "rarity": "usual",
+            "activation": "true"
+        },
+        {
+            "name": "Earth",
+            "id": "0002",
+            "rarity": "rare",
+            "activation": "true"
+        },
+        {
+            "name": "Mars",
+            "id": "0003",
+            "rarity": "legendary",
+            "activation": "true"
+        }
+    ],
+    "galaxy2": [{
+            "name": "MilkyWay",
+            "id": "0001",
+            "rarity": "usual",
+            "activation": "true"
+        },
+        {
+            "name": "Chocolate",
+            "id": "0002",
+            "rarity": "rare",
+            "activation": "true"
+        },
+        {
+            "name": "Venera",
+            "id": "0003",
+            "rarity": "legendary",
+            "activation": "true"
+        }
+    ],
+    "galaxy3": [{
+            "name": "MilkyWay",
+            "id": "0001",
+            "rarity": "usual",
+            "activation": "true"
+        },
+        {
+            "name": "Chocolate",
+            "id": "0002",
+            "rarity": "rare",
+            "activation": "true"
+        },
+        {
+            "name": "Venera",
+            "id": "0003",
+            "rarity": "legendary",
+            "activation": "true"
+        }
+    ]
+}

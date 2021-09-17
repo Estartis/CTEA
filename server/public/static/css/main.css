@@ -1,0 +1,1372 @@
+@font-face {
+    font-family: 'Klaxons';
+    src: url(/public/font/Klaxons/Klaxons.otf);
+}
+
+@font-face {
+    font-family: 'VictorMono';
+    src: url(/public/font/VictorMonoAll/TTF/VictorMono-Light.ttf);
+}
+
+header {
+    text-align: center;
+}
+
+
+/*----------------------------------------------------INDEX.HTML--------------------------------------------------------*/
+
+.index_header {
+    text-align: center;
+    width: 100%;
+    padding: 70px 0px 0px 0px;
+}
+
+.container-lang {
+    display: flex;
+    right: 25px;
+    top: 25px;
+    text-align: center;
+    justify-content: space-between;
+    vertical-align: middle;
+    width: 180px;
+    position: fixed;
+}
+
+.sign {
+    text-align: center;
+    padding: 0% 0% 0% 0%;
+}
+
+.lang-switch-ru {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-family: 'VictorMono';
+}
+
+.lang-switch-en {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-family: 'VictorMono';
+}
+
+.name {
+    color: rgb(255, 255, 255);
+    font-size: 225px;
+    font-family: 'Klaxons';
+    -moz-user-select: none;
+    /* Mozilla Firefox */
+    -webkit-user-select: none;
+    /* Google Chrome, Opera Next, Safari */
+    /*   text-shadow: #ffffffa9 0 0 10px;  -----------------ТЕНЬ---------------------*/
+}
+
+.registration {
+    font-family: 'VictorMono';
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 0px;
+    border-radius: 25px;
+    justify-content: center;
+    background-color: #00022154;
+    width: 425px;
+    height: 45px;
+    outline: none;
+    cursor: pointer;
+    tansition: all .2s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -moz-user-select: none;
+    /* Mozilla Firefox */
+    -webkit-user-select: none;
+    /* Google Chrome, Opera Next, Safari */
+}
+
+.block_btn {
+    margin: 18% 0% 3% 0%;
+}
+
+.registration:hover {
+    /*background-color: rgba(247, 247, 247, 0.384);*/
+    background-color: #000221e7;
+    ;
+    tansition: all .2s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    width: 250px;
+    -moz-user-select: none;
+    /* Mozilla Firefox */
+    -webkit-user-select: none;
+    /* Google Chrome, Opera Next, Safari */
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 72px;
+    /* ширина */
+    height: 38px;
+    /* высота */
+    border-radius: 19px;
+    /* радиус скругления */
+    background: linear-gradient(to right, #ffffff 0, #e2e2e2 40%, #7894cf 60%, #879dcc 100%);
+    background-size: 180px 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms;
+    /* анимация */
+}
+
+.switch-btn::after {
+    content: "";
+    height: 32px;
+    /* высота кнопки */
+    width: 32px;
+    /* ширина кнопки */
+    border-radius: 17px;
+    background: #fff;
+    /* цвет кнопки */
+    top: 3px;
+    /* положение кнопки по вертикали относительно основы */
+    left: 3px;
+    /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms;
+    /* анимация */
+    position: absolute;
+    z-index: 1;
+    background-color: #7894CF;
+}
+
+.switch-on {
+    background-position-x: -100px;
+}
+
+.switch-on::after {
+    left: 37px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*----------------------------------------------------POPUP-FADE--------------------------------------------------------*/
+
+.nickname-popup {
+    font-family: 'VictorMono';
+    color: white;
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    padding: 20px;
+    width: 375px;
+    height: 275px;
+    margin-left: -200px;
+    background: #312f2ffb;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.nickname-popup-fade {
+    display: none;
+}
+
+.nickname-popup-fade:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+.nickname-popup-close {
+    position: absolute;
+    font-size: 15px;
+    top: 20px;
+    right: 20px;
+    color: rgb(101, 132, 189);
+}
+
+.prescription {
+    font-size: 18px;
+    padding-top: 40px;
+}
+
+.window-enter {
+    font-family: 'VictorMono';
+    margin-top: 7px;
+    border: 30px;
+    border-color: #707070;
+    outline: none;
+    background-color: #4b4646b0;
+    font-size: 17px;
+    color: #0eddddeb;
+}
+
+.publKey-enter {
+    font-family: 'VictorMono';
+    margin-top: 7px;
+    border: 30px;
+    border-color: #707070;
+    outline: none;
+    background-color: #4b4646b0;
+    font-size: 17px;
+    color: #0eddddeb;
+}
+
+.warning {
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+.done {
+    font-family: 'VictorMono';
+    background-color: #413C3C;
+    border: 0px;
+    color: white;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 20 px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 120px;
+    height: 45px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.enter-nickname {}
+
+.warn {
+    padding-top: 25px;
+    font-size: 13px;
+}
+
+
+/*----------------------------------------------------Install-Metamask------------------------------------------------*/
+
+.install-popup {
+    font-family: 'VictorMono';
+    color: white;
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    padding: 20px;
+    width: 365px;
+    height: 190px;
+    margin-left: -200px;
+    background: #312f2ffb;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.install-popup-fade {
+    display: none;
+}
+
+.install-popup-fade:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+.install-popup-close {
+    font-size: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(101, 132, 189);
+}
+
+.install {
+    font-family: 'VictorMono';
+    background-color: #413C3C;
+    border: 0px;
+    color: white;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    width: 125px;
+    height: 45px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+/*----------------------------------------------------GAME.HTML--------------------------------------------------------*/
+
+.game {
+    width: 99.9%;
+    height: 814px;
+    overflow-x: visible;
+}
+
+.name_header {
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Klaxons';
+    color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.block-nickname {
+    display: inline-block;
+    max-width: 50%;
+    min-width: 75px;
+    background-color: #00022100;
+    float: right;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 0% 1%;
+}
+
+.Nickname {
+    text-align: center;
+    font-family: 'VictorMono';
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    height: 41px;
+    outline: none;
+    background-color: #d315da00;
+    padding-top: 10px;
+    text-overflow: clip;
+}
+
+.btn_Act {
+    display: inline-block;
+    width: 280px;
+    background-color: #00022100;
+}
+
+.btn_act {
+    font-family: 'VictorMono';
+    font-size: 13px;
+    color: #ffffff;
+    text-transform: uppercase;
+    justify-content: center;
+    height: 41px;
+    outline: none;
+    cursor: pointer;
+    background-color: #d315da00;
+    border-radius: 20px;
+    padding: 0% 10%;
+    border: 2px solid #ffffff;
+}
+
+.blockRait {
+    display: inline-block;
+    max-width: auto;
+    min-width: 75px;
+    background-color: #00022100;
+    float: right;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 0% 1%;
+}
+
+.Raiting {
+    text-align: center;
+    font-family: 'VictorMono';
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    height: 41px;
+    outline: none;
+    background-color: #d315da00;
+    padding-top: 10px;
+    text-overflow: clip;
+}
+
+.game_Block {
+    width: 63%;
+    height: 790px;
+    border-radius: 29px 29px 29px 0px;
+    display: inline-block;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    background-color: black;
+}
+
+.cardPlace {
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background-color: #3124246e;
+    border-radius: 25px;
+    float: relative;
+    font: sans-serif;
+}
+
+.choice_Galaxy {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    background-color: #b8b2b238;
+    color: white;
+    width: 80px;
+    outline: none;
+    height: 3.5%;
+    border-radius: 5px;
+    border-width: 0px;
+    font-size: 18px;
+}
+
+option {
+    background-color: #615f5f;
+}
+
+.planets_and_stars {
+    float: right;
+    margin-top: auto;
+    display: inline-block;
+    width: 35%;
+    height: 790px;
+}
+
+.card {
+    width: 100%;
+    height: 50%;
+    right: 10px;
+    top: 0px;
+    display: inline-block;
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 29px 0px 0px 20px;
+    /*заменить на y, для вертикальной прокрутки*/
+    position: relative;
+    margin-left: 10px;
+    white-space: nowrap;
+    /*убрать для вертикальной прокрутки*/
+}
+
+.card__inner {
+    margin-top: 10px;
+    overflow-x: scroll;
+}
+
+.card+.card {
+    margin-top: 1%;
+}
+
+.card-part {
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 140px;
+    min-height: 140px;
+    background-color: black;
+    position: relative;
+    /*border: 1px solid #8c8c8c;*/
+    display: inline-block;
+    border: 3px solid #8c8c8c;
+}
+
+.card-part img {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.card_planet:hover .card-part {
+
+}
+
+.card_planet:hover .data-part {
+    display: block;
+}
+
+.card_planet:hover {
+    width: 175px;
+    height: 280px;
+}
+
+.card_planet {
+    background-color: #1A1A1A;
+    border: 3px solid #8c8c8c;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+    width: 175px;
+    height: 165px;
+    vertical-align: top;
+    /*width: 215px;
+    height: 330px;
+    border: 5px solid #8c8c8c;
+    */
+}
+
+.data-part {
+    width: 180px;
+    height: 110px;
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 20px;
+    position: relative;
+    display: none;
+    /*display: block*/
+}
+
+.field-name {
+    width: 130px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #8c8c8c;
+    border: 5px solid #8c8c8c;
+    position: relative;
+    justify-content: center;
+}
+
+.name-plan {
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'VictorMono';
+}
+
+.round {
+    margin-top: 10px;
+    width: 17px;
+    height: 17px;
+    background-color: #8c8c8c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.field-type {
+    margin-top: 5px;
+    width: 130px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #8c8c8c;
+    border: 3px solid #8c8c8c;
+    position: relative;
+    justify-content: center;
+}
+
+.type-plan {
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'VictorMono';
+    color: #d3c017;
+}
+
+.NamePlanets {
+    background-color: #234D82;
+    font-family: 'VictorMono';
+    font-size: 20px;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    padding: 0% 3%;
+    color: #ffffff;
+    text-align: center;
+    width: 17%;
+    margin: 0% 35%;
+    padding-bottom: 0px;
+}
+
+.designation {
+    background-color: #234D82;
+    font-family: 'VictorMono';
+    font-size: 20px;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+    padding: 0% 10%;
+    color: #ffffff;
+    text-align: center;
+    bottom: 0px;
+    left: 19%;
+    margin: auto;
+}
+
+.card_star {
+    margin-left: 5px;
+    position: relative;
+    display: inline-block;
+    width: 215px;
+    height: 330px;
+    background-color: #0000003d;
+    border-radius: 25px;
+}
+
+.NameStars {
+    background-color: #234D82;
+    font-family: 'VictorMono';
+    font-size: 20px;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    padding: 0% 2%;
+    color: #ffffff;
+    text-align: center;
+    width: 17%;
+    margin: 0% 35%;
+}
+
+.choise-galaxy {
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    height: 250px;
+    background-color: #0000003d;
+    border: 0px solid;
+    border-radius: 25px;
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width:1366px) {
+    .registration {
+        font-size: 25px;
+        width: 300px;
+        height: 35px;
+    }
+    .index_header {
+        padding: 20px 0px 0px 0px;
+    }
+    .name {
+        font-size: 190px;
+    }
+    .registration:hover {
+        /*background-color: rgba(247, 247, 247, 0.384);*/
+        background-color: #000221e7;
+        tansition: all .2s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        width: 190px;
+        -moz-user-select: none;
+        /* Mozilla Firefox */
+        -webkit-user-select: none;
+        /* Google Chrome, Opera Next, Safari */
+    }
+    .install-popup {
+        top: 210px;
+        left: 50%;
+        padding: 20px;
+        width: 340px;
+        height: 160px;
+    }
+    .install-popup-close {
+        font-size: 13px;
+        top: 15px;
+        right: 15px;
+    }
+    .install {
+        border-radius: 25px;
+        font-size: 18px;
+        margin-top: 25px;
+        width: 115px;
+        height: 40px;
+    }
+    .nickname-popup {
+        top: 210px;
+        left: 50%;
+        padding: 20px;
+        width: 340px;
+        height: 240px;
+    }
+    .nickname-popup-close {
+        top: 15px;
+        right: 15px;
+        font-size: 13px;
+    }
+    .done {
+        border-radius: 25px;
+        font-size: 18px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        width: 110px;
+        height: 35px;
+    }
+    .warn {
+        padding-top: 25px;
+        font-size: 13px;
+    }
+    .prescription {
+        font-size: 17px;
+        padding-top: 30px;
+    }
+    .window-enter {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+}
+.selected {
+    opacity: 0.6;
+}
+
+
+/*-------------------------------------------------pole-game.HTML------------------------------------------------------*/
+
+.cards{
+    position: relative;
+    height: 100%;
+}
+
+.star {
+    background-color: rgba(41, 35, 35, 0.651);
+    width: 175px;
+    height: 175px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 65%;
+    top: 97%;
+}
+
+.gm-cardplace {
+    background-color: rgba(41, 35, 35, 0.651);
+    width: 175px;
+    height: 175px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0%;
+    position: absolute;
+}
+
+.orb {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    top:62%;
+    left:42%;
+    
+    border: 2px solid #8c8c8c;
+}
+
+.cp-1 {
+    position: absolute;
+    left: 93%;
+    top: 92%;
+    
+}
+
+.cp-2 {
+    position: absolute;
+    left: 37%;
+    top: 83%;
+}
+
+.cp-3 {
+    position: absolute;
+    left: 57%;
+    top: 138%;
+}
+
+.orb2 {
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    position: absolute;
+    top:32%;
+    left:21%;
+    border: 2px solid #8c8c8c;
+
+}
+
+.cp-4 {
+    position: absolute;
+    left: 50%;
+    top: 26%;
+}
+
+.cp-5 {
+    position: absolute;
+    left: 103%;
+    top: 50%;
+}
+
+.cp-6 {
+    position: absolute;
+    left: 106%;
+    top: 140%;
+}
+
+.cp-7 {
+    position: absolute;
+    left: 65%;
+    top: 175%;
+}
+
+.cp-8 {
+    position: absolute;
+    left: 23%;
+    top: 140%;
+}
+
+.orb3 {
+    width: 1700px;
+    height: 1700px;
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 10%;
+    border: 2px solid #8c8c8c;
+}
+
+.cp-9 {
+    position: absolute;
+    left: 17%;
+    top: 75%;
+}
+
+.cp-10 {
+    position: absolute;
+    left: 122%;
+    top: 160%;
+}
+
+.cp-11 {
+    position: absolute;
+    left: 100%;
+    top: 3%;
+}
+
+.cp-12 {
+    position: absolute;
+    left: 9%;
+    top: 167%;
+}
+
+.cp-13 {
+    position: absolute;
+    left: 29%;
+    top: 4%;
+}
+
+.cp-14 {
+    position: absolute;
+    left: 2%;
+    top: 10%;
+}
+
+
+
+
+/*----------------------------------------------------MARKET.HTML--------------------------------------------------------*/
+
+.header-block {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.market_header {
+    margin-right: 45%;
+    font-size: 54px;
+    font-family: 'VictorMono';
+    color: rgb(255, 255, 255);
+}
+
+.comeback {
+    display: flex;
+    float: left;
+    outline: none;
+    background-color: none;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.main-module {
+    height: 809px;
+    width: 1322px;
+    margin: auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+
+.card-window {
+    width: 340px;
+    height: 585px;
+    box-sizing: border-box;
+}
+
+.card-planet-market {
+    background-color: #1A1A1A;
+    border: 5px solid #8c8c8c;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+    height: 495px;
+    width: 323px;
+}
+
+.card-part-market {
+    margin-left: 23px;
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 270px;
+    height: 270px;
+    min-height: 180px;
+    background-color: black;
+    position: relative;
+    border: 3px solid #8c8c8c;
+}
+
+.card-part-market img {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.data-part-market {
+    width: 270px;
+    height: 165px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.field-name-market {
+    width: 170px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #8c8c8c;
+    border: 5px solid #8c8c8c;
+    position: relative;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.name-plan-market {
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'VictorMono';
+    width: 150px;
+}
+
+.round-market {
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: #8c8c8c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.field-type-market {
+    width: 195px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #8c8c8c;
+    border: 3px solid #8c8c8c;
+    position: relative;
+}
+
+.inf {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 8px;
+}
+
+.type-plan-market {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'VictorMono';
+    color: #d3c017;
+    margin-top: 5px;
+    width: 100%;
+    display: inline-block;
+}
+
+.information {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    display: inline-block;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.img-white {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.buttons-market {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    height: 60px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+}
+
+.price {
+    width: 165px;
+    height: 63px;
+    border: 2px solid #b4b4b4;
+    box-sizing: border-box;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.buy {
+    width: 165px;
+    height: 63px;
+    border: 2px solid #8c8c8c;
+    box-sizing: border-box;
+    background: #309c97;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'VictorMono';
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    /* Выводим текст */
+    position: absolute;
+    /* Абсолютное позиционирование */
+    width: 200px;
+    /* Ширина подсказки */
+    left: 0;
+    top: 0;
+    /* Положение подсказки */
+    background: #1d7974;
+    /* Синий цвет фона */
+    color: #fff;
+    /* Цвет текста */
+    padding: 0.5em;
+    /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Параметры тени */
+    pointer-events: none;
+    /* Подсказка */
+    opacity: 0;
+    /* Подсказка невидима */
+    transition: 1s;
+    /* Время появления подсказки */
+    white-space: pre-line;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    /* Показываем подсказку */
+    left: 4em;
+    /* Положение подсказки */
+}
+
+
+/*-------------------------------------------MARKET-POPUP-FADE.HTML--------------------------------------------------------*/
+
+.market-popup {
+    font-family: 'VictorMono';
+    color: white;
+    position: fixed;
+    top: 350px;
+    left: 50%;
+    padding: 20px;
+    width: 350px;
+    height: 225px;
+    margin-left: -200px;
+    background: #312f2ffb;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.market-popup-fade {
+    display: none;
+}
+
+.market-popup-fade:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+.market-popup-close {
+    position: absolute;
+    font-size: 15px;
+    top: 10px;
+    right: 20px;
+    color: rgb(101, 132, 189);
+}
+
+.window-enter-market {
+    font-family: 'VictorMono';
+    margin-top: 25px;
+    border: 30px;
+    border-color: #707070;
+    outline: none;
+    background-color: #4b4646b0;
+    font-size: 20px;
+    color: #0eddddeb;
+}
+
+.agree {
+    font-family: 'VictorMono';
+    background-color: #413C3C;
+    border: 0px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 120px;
+    height: 45px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.warn {
+    padding-top: 25px;
+    font-size: 13px;
+}
+
+
+/*----------------------------------------------------rating.HTML--------------------------------------------------------*/
+
+.container__rating {
+    padding: 0 10px;
+    font-family: 'VictorMono';
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.rating__inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1322px;
+    height: 809px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+}
+
+.rating__titels {
+    width: 1213px;
+    padding-top: 50px;
+    display: flex;
+    align-items: top;
+}
+
+.Rtitels {
+    margin-left: 75px;
+    font-family: 'VictorMono';
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.Rtitels+.Rtitels {
+    margin-left: 400px;
+}
+
+.rating__table {
+    max-height: 579px;
+    overflow-y: scroll;
+    margin-top: 50px;
+}
+
+.table {
+    font-family: 'VictorMono';
+    font-size: 30px;
+    color: #ffffff;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid #000;
+    width: 1213px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr,
+th {
+    border: 3px solid black;
+}
+
+.number_1 {
+    background: rgba(80, 80, 80, 0.4);
+    width: 115px;
+}
+
+.number_2 {
+    width: 115px;
+    background: rgba(80, 80, 80, 0.1);
+}
+
+.player_1 {
+    background: rgba(80, 80, 80, 0.4);
+    width: 740px;
+}
+
+.player_2 {
+    width: 740px;
+    background: rgba(80, 80, 80, 0.1);
+}
+
+.rating_1 {
+    background: rgba(80, 80, 80, 0.4);
+}
+
+.rating_2 {
+    background: rgba(80, 80, 80, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(15, 15, 15);
+    height: 6px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #292929;
+}
+
+ ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.3);
+    background-color: #0c0c0cd2;
+}
+
+
+/*----------------------------------------------------cross.HTML--------------------------------------------------------*/
+
+.cross_header {
+    margin-right: 40%;
+    font-size: 54px;
+    font-family: 'VictorMono';
+    color: rgb(255, 255, 255);
+}
+
+.main-crossbl {
+    margin-top: 55px;
+    padding-bottom: 3%;
+    max-width: 100%;
+}
+
+.cross-CPlace {
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.cross-Card {
+    margin-left: 5px;
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 180px;
+    background-color: rgba(196, 196, 196, 0.5);
+    vertical-align: bottom;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.cross-arrow {
+    margin-bottom: 7.5%;
+}
+
+.cross-go {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 54px;
+    font-family: 'VictorMono';
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cross-window {
+    height: 478px;
+    width: 1322px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cross-slider {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    position: relative;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.cross-slider__inner {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    overflow-x: scroll;
+}

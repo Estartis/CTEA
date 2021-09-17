@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/public/static/css/main.css">
+    <title> CTea </title>
+    <script src="/public/js/jquery-3.5.1.min.js"></script>
+    <script type="text/json" src="/public/json/data.json"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="application/javascript"></script>
+    <style type="text/css">
+        html {
+            font-family: monospace;
+            height: 100%;
+            background-image: url(/public/image/Background_game.jpg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="name_header">
+            Galaxy
+        </div>
+        <div class="block-nickname">
+            <div class="Nickname">
+                {{nickname}}
+            </div>
+        </div>
+    </header>
+    <main class="game">
+        <div class="btns">
+            <div class="btn_Act">
+                <button class="btn_act lang" key='market' id="market_but"> 
+                    Market
+                </button>
+            </div>
+            <div class="btn_Act">
+                <button class="btn_act lang" key='crosing' id="crosing_but">
+                    Crossing
+                </button>
+            </div>
+            <dir class="btn_Act">
+                <button class="btn_act lang" key='rating' id="rating_but">
+                    Raiting 
+                </button>
+            </dir>
+            <div class="blockRait">
+                <div class="Raiting lang" key='num-rating'>
+                    Raiting: {{rating}}
+                </div>
+            </div>
+        </div>
+
+        <div class="game_Block">
+            <div class="cards">
+                <div class="orb3"></div>
+                <div class="orb2"></div>
+                <div class="orb"></div>
+                
+                <div class="star">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-1">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-2">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-3">
+                    <div class="gm-cardplace"></div>
+                </div>
+
+                <div class="cp-4">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-5">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-6">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-7">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-8">
+                    <div class="gm-cardplace"></div>
+                </div>
+                
+                <div class="cp-9">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-10">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-11">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-12">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-13">
+                    <div class="gm-cardplace"></div>
+                </div>
+                <div class="cp-14">
+                    <div class="gm-cardplace"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--
+        <iframe src="http://cryptogalaxy.fun/pole_game" width="100%" height="100%" class="game_Block" id="GameBlock"></iframe>
+            http://cryptogalaxy.fun/pole_game
+            http://127.0.0.1:5500/public/templates/pole_game.html
+        -->
+        <div class="planets_and_stars ">
+            <div class="card " id='cardPlanet'>
+                <p class="NamePlanets lang " key='planets' style="right: 50px; left: 50px; "> Planets </p>
+                <div class="card__inner" id="cardPlanet">
+                   {{{cardPlanet}}}
+                </div>
+            </div>
+            <!--
+                <div class="card_planet">
+                    <div class="card-part">
+                        <img class="planet_color" src="/public/image/Graphics/withoutWater/planet_color_blue.png" width="150" height="150">
+                        <img class="planet_contour" src="/public/image/Graphics/contour/contour_red.png" width="170" height="170">
+                    </div>
+                    <div class="data-part">
+                        <div class="field-name">
+                            <p class="name-plan">Сheese</p>
+                        </div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="field-type">
+                            <p class="type-plan">Rare</p>
+                        </div>
+                    </div
+                </div>`    
+            -->
+
+            <div class="card " id='cardStar'>
+                <p class="NameStars lang " key='stars' style="right: 50px; left: 50px; "> Stars </p>
+                <div class="card__inner " id='cardStar'>
+                    {{{cardStar}}}
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <script src="/public/js/game.js "></script>
+</body>
+<script src="/public/js/lang.js"></script>
+
+</html>

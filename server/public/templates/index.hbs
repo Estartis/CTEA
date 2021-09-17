@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/public/static/css/main.css">
+    <title> CTea </title>
+    <script src="/public/js/jquery-3.5.1.min.js"></script>
+    <script src="/public/js/main.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="application/javascript"></script>
+    <style type="text/css">
+        html {
+            font-family: monospace;
+            height: 100%;
+            background-image: url(/public/image/background.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            min-height: 520px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="index_header">
+        <span class="name">
+            Galaxy
+        </span>
+    </header>
+
+    <div class="container-lang">
+        <p1 class="lang-switch-ru">РУС</p1>
+        <div class="switch-btn switch-on" id="en"></div>
+        <p1 class="lang-switch-en">EN</p1>
+    </div>
+
+    <main>
+        <div class="sign">
+
+            <div class="block_btn">
+                <button class="registration lang" key="reg-btn" id="reg"> <!--"window.location.href='game.html'"-->
+                    Registration
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="nickname-popup-fade">
+        <div class="nickname-popup">
+            <a class="nickname-popup-close lang" key="close-btn" href="#">Close</a>
+            <form class="enter-nickname" method="post" id="myForm">
+                <div class="prescription lang" key="prep">enter your nickname</div>
+                <input class="window-enter" type="text" name="nickname" id="nickname">
+                <div class="warning lang" key="Ynick">Your nickname </div>
+                <input type="text" class="publKey-enter" name="publkey" id="publkey" readonly>
+                <div class="warning lang" key="Ypublkey">your publKey</div>
+                <div class="warn lang" key="warn2">This name will be shown to all other users</div>
+                <input type="submit" class="done lang" key="done" value="Done">
+            </form>
+        </div>
+    </div>
+
+    <div class="install-popup-fade">
+        <div class="install-popup">
+            <a class="install-popup-close lang" key="close-btn" href="#">Close</a>
+            <div class="prescription lang" key="inst-M">Please install Metamask First</div>
+            <button class="install">Install</button>
+        </div>
+    </div>
+
+</body>
+<script src="/public/js/lang.js"></script>
+<script src="/public/js/registration.js"></script>
+
+</html>
